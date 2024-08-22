@@ -48,7 +48,7 @@ export interface ForYouNews {
   url: string;
   updatedAt: string;
   description: string;
-  urlToImage: string;
+  image: string;
 }
 
 export interface NewsCategory {

@@ -1,4 +1,5 @@
 import moment from "moment";
+import { truncateText } from "../helpers/turncateText";
 
 interface NewsCard {
   image: string;
@@ -30,14 +31,8 @@ const NewsCard: React.FC<NewsCard> = ({
           style={{ maxHeight: 180 }}
         />
 
-        <h4 className="font-semibold mt-2">
-          {title.split("").slice(0, 50).join("") +
-            (title.split("").length > 50 ? "..." : "")}
-        </h4>
-        <p className="news-desc font-xs">
-          {description.split("").slice(0, 100).join("") +
-            (description.split("").length > 100 ? "..." : " ")}
-        </p>
+        <h4 className="font-semibold mt-2">{truncateText(title, 50)}</h4>
+        <p className="news-desc font-xs">{truncateText(description, 100)}</p>
         <p className="font-small flex item-center gap-1 mt-2">
           <span className="text-primary truncate">
             {category ? category : author},

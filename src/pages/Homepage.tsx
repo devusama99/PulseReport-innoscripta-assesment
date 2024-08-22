@@ -22,6 +22,7 @@ const HomePage = () => {
 
   const loadingIntial = async () => {
     const response: any = await getNewsFeed();
+    console.log(response);
     if (response[0].length) setTopStories(response[0]);
     if (response[1].length) setLatestNews(response[1]);
     if (response[2].length) setMostPopular(response[2]);
@@ -181,7 +182,7 @@ const HomePage = () => {
                       title={article.title}
                       description={article.description}
                       updatedAt={article.updatedAt}
-                      urlToImage={article.urlToImage}
+                      image={article.image}
                       author={article.author}
                     />
                   ))}
