@@ -1,4 +1,4 @@
-# News App
+# PulseReport News App
 
 Welcome to the News App! This application aggregates news from multiple sources based on your preferences using REST APIs from three major news platforms.
 
