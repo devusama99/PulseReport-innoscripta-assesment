@@ -1,0 +1,79 @@
+import { Button, Input, Layout, Modal, Switch } from "antd";
+import { Content, Header } from "antd/es/layout/layout";
+import Logo from "../assets/logo.png";
+import {
+  createSearchParams,
+  Link,
+  Outlet,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
+import { SearchOutlined } from "@ant-design/icons";
+import { useState } from "react";
+const { Search } = Input;
+
+const Template = () => {
+  const [searchModalOpen, setSearchModalOpen] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const searchAction = (value: string) => {
+    setSearchModalOpen(false);
+    navigate({
+      pathname: "search",
+      search: createSearchParams({ query: value }).toString(),
+    });
+  };
+  return (
+    <Layout>
+      <Header className="sticky top-0" style={{ zIndex: 100 }}>
+        <Modal
+          title="Search Articles"
+          open={searchModalOpen}
+          onOk={() => setSearchModalOpen(true)}
+          onCancel={() => setSearchModalOpen(false)}
+          footer={<></>}
+        >
+          <Search
+            placeholder="Search..."
+            enterButton
+            onSearch={searchAction}
+            defaultValue={searchParams.get("query")?.toString()}
+          />
+        </Modal>
+        <div className="w-full h-full flex items-center justify-between max-w-[1280px] mx-auto px-4 xl:px-0">
+          <Link className="flex gap-2 items-center" to="/app">
+            <img src={Logo} alt="Logo" width={"40px"} />
+            <h4 className="text-xl font-bold text-primary logo-text">
+              ReportPulse
+            </h4>
+          </Link>
+          <div className=" items-center hidden md:flex">
+            <Search
+              placeholder="Search..."
+              enterButton
+              style={{ minWidth: 400 }}
+              onSearch={searchAction}
+              defaultValue={searchParams.get("query")?.toString()}
+            />
+          </div>
+          <span className="flex items-center gap-2">
+            <Button
+              type="text"
+              icon={<SearchOutlined />}
+              className="md:hidden"
+              onClick={() => setSearchModalOpen(true)}
+            />
+            <p className="font-semibold">Dark Mode</p>
+            <Switch />
+          </span>
+        </div>
+      </Header>
+      <Content className="py-10 px-4">
+        <Outlet />
+      </Content>
+    </Layout>
+  );
+};
+
+export default Template;
