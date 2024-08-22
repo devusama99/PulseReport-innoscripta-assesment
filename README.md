@@ -47,6 +47,6 @@ The app will be accessible at -[localhost](http://localhost:3000/).
 **API Requests:** The app queries news data from The Guardian, NewsAPI, and The New York Times based on these preferences.
 **Display News:** Aggregates and displays relevant news articles to the user.
 
-<p style="color: white; font-weight: bold; background-color:red">ENV file and all API key are exposed on purpose so reviewing team doesn't have to make a lot of effort. But in Production never leave your .env file Exposed to public instead use env-example file in this to exposed env skeleton</p>
+**ENV file and all API key are exposed on purpose so reviewing team doesn't have to make a lot of effort. But in Production never leave your .env file Exposed to public instead use env-example file in this to exposed env skeleton**
 
 **Also dont forget to add .env in .gitignore**
