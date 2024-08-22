@@ -1,5 +1,5 @@
 import { Button, Input, Layout, Modal } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
+import { Content, Footer, Header } from "antd/es/layout/layout";
 import Logo from "../assets/logo.png";
 import {
   createSearchParams,
@@ -70,6 +70,12 @@ const Template = () => {
       <Content className="py-10 px-4">
         <Outlet />
       </Content>
+      <Footer className="bg-primary">
+        <p className="text-center w-full" style={{ color: "white" }}>
+          All Rights Reserved by Muhammad Usama &#169;{" "}
+          <span className="font-bold">PulseReport</span>
+        </p>
+      </Footer>
     </Layout>
   );
 };
