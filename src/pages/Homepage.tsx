@@ -71,7 +71,7 @@ const HomePage = () => {
             {/* Latest News Section */}
             {latestNews.length ? (
               <div>
-                <div className="mt-10">
+                <div className="mt-10 ">
                   <h4 className="section-heading">
                     <span className="section-heading-underline">Latest</span>
                     News
@@ -117,7 +117,7 @@ const HomePage = () => {
 
             {/* Most Popular Articles */}
             {mostpopular.length ? (
-              <div className="mt-5 md:mt-10">
+              <div className="mt-10">
                 <div className=" flex justify-between items-center">
                   <h4 className="section-heading">
                     <span className="section-heading-underline">Most</span>

@@ -36,14 +36,20 @@ const Welcome: React.FC = () => {
       setSources([]);
       setSelectedSources([]);
       const response = await getCategoriesSources(selectedCategories);
+      console.log(response);
       if (response) {
-        setSources(response);
-        setLoadingSources(false);
+        if (response[0].code === "ERR_BAD_REQUEST")
+          message.error({
+            content:
+              "Error getting sources. Please try again after sometime!! ",
+          });
+        else setSources(response);
       } else {
         message.error({
           content: "Error getting sources. Please try again after sometime!!",
         });
       }
+      setLoadingSources(false);
     } else if (stage === 4) {
       localStorage.setItem("sources", JSON.stringify(selectedSources));
       localStorage.setItem("categories", JSON.stringify(selectedCategories));

@@ -17,6 +17,7 @@ export const getCategorySources = async (category: string) => {
     } else return response.data.sources;
   } catch (e) {
     console.error("Error fetchign sources for " + category, e);
+    return e;
   }
 };
 

@@ -57,15 +57,13 @@ const Template = () => {
               defaultValue={searchParams.get("query")?.toString()}
             />
           </div>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center justify-end gap-2 md:hidden">
             <Button
               type="text"
               icon={<SearchOutlined />}
               className="md:hidden"
               onClick={() => setSearchModalOpen(true)}
             />
-            <p className="font-semibold">Dark Mode</p>
-            <Switch />
           </span>
         </div>
       </Header>
