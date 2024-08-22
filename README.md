@@ -7,7 +7,7 @@ Welcome to the News App! This application aggregates news from multiple sources 
 The app is deployed on the following platforms:
 
 - [Vercel](https://hurry-app.vercel.app/#/)
-- [Netlify](https://hurryapp.netlify.app/#/)
+- [Netlify](https://pulse-report-innoscripta-assessment.netlify.app/)
 
 ## Features
 
