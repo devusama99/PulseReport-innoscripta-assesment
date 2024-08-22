@@ -2,6 +2,10 @@
 
 Welcome to the News App! This application aggregates news from multiple sources based on your preferences using REST APIs from three major news platforms.
 
+## Disclaimer
+
+**This app uses test/dev API keys and have limitated number of requests per 12 hours. Please Keep in mind while using the app.**
+
 ## Deployment
 
 The app is deployed on the following platforms:
