@@ -52,5 +52,3 @@ The app will be accessible at -[localhost](http://localhost:3000/).
 **Display News:** Aggregates and displays relevant news articles to the user.
 
 **ENV file and all API key are exposed on purpose so reviewing team doesn't have to make a lot of effort. But in Production never leave your .env file Exposed to public instead use env-example file in this to exposed env skeleton**
-
-**Also dont forget to add .env in .gitignore**
