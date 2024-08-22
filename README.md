@@ -6,13 +6,6 @@ Welcome to the News App! This application aggregates news from multiple sources 
 
 **This app uses test/dev API keys and have limitated number of requests per 12 hours. Please Keep in mind while using the app.**
 
-## Deployment
-
-The app is deployed on the following platforms:
-
-- [Vercel](https://pulse-report-innoscripta-assesment.vercel.app)
-- [Netlify](https://pulse-report-innoscripta-assessment.netlify.app/)
-
 ## Features
 
 - **Personalized News**: Tailors news content according to user preferences.
