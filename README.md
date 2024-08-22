@@ -6,7 +6,7 @@ Welcome to the News App! This application aggregates news from multiple sources 
 
 The app is deployed on the following platforms:
 
-- [Vercel](pulse-report-innoscripta-assesment.vercel.app)
+- [Vercel](https://pulse-report-innoscripta-assesment.vercel.app)
 - [Netlify](https://pulse-report-innoscripta-assessment.netlify.app/)
 
 ## Features
